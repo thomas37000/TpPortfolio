@@ -1,3 +1,4 @@
+import { Ability } from './Abilitiy';
 import { Generation } from './Generation';
 import { Type } from './Type';
 
@@ -10,6 +11,7 @@ export class PokemonModel {
   private _poids: number;
   private _image: string;
   private _generation: Generation | undefined;
+  private _ability: Ability[];
 
   constructor(
     id: number,
@@ -17,7 +19,8 @@ export class PokemonModel {
     categorie: string,
     type: Type[],
     taille: number,
-    poids: number
+    poids: number,
+    ability: Ability[]
   ) {
     this._id = id;
     this._nom = nom;
@@ -25,6 +28,7 @@ export class PokemonModel {
     this._type = type;
     this._taille = taille;
     this._poids = poids;
+    this._ability = ability;
     //  avec cette url plus besoin de mettre chaque fois dans le pokemon service l'url de chacun
     this._image =
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
@@ -90,5 +94,13 @@ export class PokemonModel {
 
   set generation(value: Generation) {
     this._generation = value;
+  }
+
+  get ability(): Ability[] {
+    return this._ability;
+  }
+
+  set ability(value: Ability[]) {
+    this._ability = value;
   }
 }

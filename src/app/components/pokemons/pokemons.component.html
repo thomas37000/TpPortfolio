@@ -25,10 +25,8 @@
         </h5>
       </a>
 
-      <h5 class="font-japonais">{{ pok.name | titlecase }}( afficher avec une font japonaise )</h5>
-
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        <!-- <span>Catégorie: </span>{{ pok.generation.name }} -->
+        <!-- <span>Capacité(e)s: </span>{{ability.ability.name | titlecase}} -->
       </p>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
         <span>Espèce: </span> {{ pok.species.name }}
@@ -49,7 +47,6 @@
         <span>Type: </span>{{ pok.types[0].type.name }}
       </p>
 
-      <p class="id-pokemon">{{ pok.id | number: "3.0-0" }}</p>
     </div>
   </div>
 </div>

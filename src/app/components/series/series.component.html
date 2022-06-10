@@ -1,1 +1,26 @@
-<p>series works!</p>
+<!-- toutes les saisons de la série cliquée -->
+<div class="row" *ngIf="serie$ | async as serie">
+
+    <div *ngFor="let saison of serie.saisons" class="card">
+      <a href="#">
+        <img [src]="saison.image" [alt]="saison.image " class="img-fluid rounded card-img-top mb-2" />
+      </a>
+    </div>
+  </div>
+
+<!-- toutes les séries -->
+<div class="grid-serie" *ngIf="series$ | async as series">
+  <p *ngIf="series.length == 0">pas de séries</p>
+  <div *ngIf="series.length > 0">
+    <div *ngFor="let s of series" class="card">
+      <a href="#">
+        <img
+          [src]="s.image"
+          [alt]="s.nom"
+          class="img-fluid rounded card-img-top mb-2"
+          (click)="afficherSaison(s.id)"
+        />
+      </a>
+    </div>
+  </div>
+</div>

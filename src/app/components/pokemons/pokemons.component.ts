@@ -19,19 +19,19 @@ export class PokemonsComponent implements OnInit {
           .getAllDatasPokemon(result.name)
           .subscribe((res: any) => {
             this.pokemonList.push(res);
-            console.log(res);
+            //console.log(res);
           });
       });
 
-      // récupérer les générations de l'api
-      res.results.forEach((result: { name: string }) => {
-        this.dataService
-          .getGenerationsPokemon(result.name)
-          .subscribe((res: any) => {
-            this.pokemonList.push(res);
-            console.log(res);
-          });
-      });
+      // récupérer les capacitées de l'api de chaque Pokémon
+      //   res.results.forEach((result: { name: string }) => {
+      //     this.dataService
+      //       .getAbilitiesPokemon(result.name)
+      //       .subscribe((res: any) => {
+      //         this.pokemonList.push(res);
+      //         console.log(res);
+      //       });
+      //   });
     });
   }
 }

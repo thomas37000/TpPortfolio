@@ -13,6 +13,7 @@ import { MessagerieComponent } from './components/messagerie/messagerie.componen
 import { SeriesComponent } from './components/series/series.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     MessagerieComponent,
     SeriesComponent,
     CocktailComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

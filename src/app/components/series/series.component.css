@@ -1,0 +1,13 @@
+.grid-serie {
+  display: flex;
+  background-color: lightgray;
+  width: 1000px;
+}
+
+.card {
+  width: 18rem;
+}
+
+.img-serie {
+  width: 200px;
+}

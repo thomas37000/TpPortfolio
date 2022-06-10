@@ -19,7 +19,11 @@ export class DatasService {
     return this._http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
 
-  getGenerationsPokemon(name: string) {
+  getAbilitiesPokemon(name: string) {
     return this._http.get(`https://pokeapi.co/api/v2/ability/${name}`);
+  }
+
+  getPokemonType(pokemon: any): string {
+    return pokemon && pokemon.types.length > 0 ? pokemon.types[0].type.name : '';
   }
 }

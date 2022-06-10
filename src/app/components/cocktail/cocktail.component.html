@@ -1,1 +1,15 @@
-<p>cocktail works!</p>
+<div class="grid-serie" *ngIf="cocktails$ | async as cocktails">
+  <p *ngIf="cocktails.length == 0">pas de cocktails</p>
+  <div *ngIf="cocktails.length > 0">
+    <div *ngFor="let s of cocktails" class="card">
+      <div>{{ s.strDrink }}</div>
+      <a href="#">
+        <img
+          [src]="s.strDrinkThumb"
+          [alt]="s.strDrink"
+          class="img-fluid rounded card-img-top mb-2"
+        />
+      </a>
+    </div>
+  </div>
+</div>
