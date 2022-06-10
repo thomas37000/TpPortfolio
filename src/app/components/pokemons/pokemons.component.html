@@ -1,1 +1,55 @@
-<p>pokemons works!</p>
+<p *ngIf="pokemonList.length == 0">Il n'y a pas de Pokémons</p>
+
+<div class="total-pokemons">
+  {{ pokemonList.length }} pokémons de l'api
+  <a href="https://pokeapi.co/" class="lien-api">Pokeapi</a>
+</div>
+
+<div
+  class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-wrap"
+>
+  <div *ngFor="let pok of pokemonList" class="card">
+    <a href="#">
+      <img
+        class="rounded-t-lg"
+        [src]="pok.sprites.front_default"
+        [alt]="pok.name"
+      />
+    </a>
+    <div class="p-5">
+      <a href="#">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-green-600 dark:text-white pok-name"
+        >
+          {{ pok.name | titlecase }}
+        </h5>
+      </a>
+
+      <h5 class="font-japonais">{{ pok.name | titlecase }}( afficher avec une font japonaise )</h5>
+
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <!-- <span>Catégorie: </span>{{ pok.generation.name }} -->
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Espèce: </span> {{ pok.species.name }}
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Poids: </span> {{ pok.weight / 10 | number: "1.0-2" }} kg
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Taille: </span>{{ pok.height / 10 | number: "1.0-2" }} m
+      </p>
+      <!-- <p
+        class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+        *ngfor="let type of pokemonList.types"
+      >
+        <span>Type: </span>{{ type.type.name }}
+      </p> -->
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Type: </span>{{ pok.types[0].type.name }}
+      </p>
+
+      <p class="id-pokemon">{{ pok.id | number: "3.0-0" }}</p>
+    </div>
+  </div>
+</div>

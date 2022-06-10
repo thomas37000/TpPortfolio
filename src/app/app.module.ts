@@ -12,6 +12,7 @@ import { PokemonsComponent } from './components/pokemons/pokemons.component';
 import { MessagerieComponent } from './components/messagerie/messagerie.component';
 import { SeriesComponent } from './components/series/series.component';
 import { CocktailComponent } from './components/cocktail/cocktail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CocktailComponent } from './components/cocktail/cocktail.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
