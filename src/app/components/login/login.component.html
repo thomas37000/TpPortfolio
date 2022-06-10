@@ -1,0 +1,14 @@
+<form #formateur="ngForm">
+    <div>Quel est ton formateur préféré ?</div>
+  
+    <input
+      type="password"
+      name="password"
+      id="password"
+      ngModel
+      class="input-password"
+    />
+    <input type="submit" value="Entrer" class="btn-submit" (click)="mdp(formateur.value)" />
+  </form>
+  
+ 
