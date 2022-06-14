@@ -1,0 +1,38 @@
+.contact-grid {
+    text-align: center;
+}
+
+.header-contact, .formulaire {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.main-contact {
+    display: flex;
+    height: 400px;
+}
+
+.user-list-contact {
+    background-color: lightgray;
+    width: 250px;
+    height: 700px;
+}
+
+.users-messages, .formulaire {
+    width: 500px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.formulaire {
+    height: 300px;
+}
+
+.users-messages {
+    margin-left: 1rem;
+    padding-top: 5px;
+}

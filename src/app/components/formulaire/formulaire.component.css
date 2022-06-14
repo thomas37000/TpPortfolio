@@ -1,0 +1,26 @@
+.material-form {
+    margin-left: 1rem;
+    text-align: left;
+    width: 500px;
+  }
+  
+  .input-de, .input-message {
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-message {
+    padding: 3rem;
+  }
+  
+  .errorForm {
+    color: red;
+  }
+  
+  .example-button-row button,
+  .example-button-row a {
+    margin-right: 8px;
+  }

@@ -1,0 +1,7 @@
+<p *ngIf="personnes.length == 0">Il n'y a aucune personnes actives</p>
+
+<ul *ngIf="personnes.length > 0">
+  <li *ngFor="let personne of personnes">
+    {{ personne.toString() }}
+  </li>
+</ul>

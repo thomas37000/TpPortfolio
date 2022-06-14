@@ -9,21 +9,24 @@ import { CocktailService } from '../../services/cocktail.service';
   styleUrls: ['./cocktail.component.css'],
 })
 export class CocktailComponent implements OnInit {
- // public cocktails$: Observable<Cocktail[]>;
- public cocktails$: any[] = [];
+  // public cocktails$: Observable<Cocktail[]>;
+  public cocktails$: any[] = [];
 
   constructor(private svc: CocktailService) {
-   // this.cocktails$ = this.svc.getCocktails();
+    // this.cocktails$ = this.svc.getCocktails();
   }
 
-  ngOnInit(): void {
-    this.svc.getCocktails(name).subscribe((res: any) => {
-      res.drinks.forEach((drinks: { name: string }) => {
-        this.svc
-          .getCocktails(drinks.name)
-          .subscribe((res: any) => {
-            this.cocktails$.push(res);
-            console.log(res);
-          });
-      });
+  ngOnInit(): void {}
+
+  //   ngOnInit(): void {
+  //     this.svc.getCocktails(name).subscribe((res: any) => {
+  //       res.drinks.forEach((drinks: { name: string }) => {
+  //         this.svc
+  //           .getCocktails(drinks.name)
+  //           .subscribe((res: any) => {
+  //             this.cocktails$.push(res);
+  //             console.log(res);
+  //           });
+  //       });
+  // }
 }
