@@ -1,7 +1,25 @@
 <p *ngIf="personnes.length == 0">Il n'y a aucune personnes actives</p>
 
-<ul *ngIf="personnes.length > 0">
-  <li *ngFor="let personne of personnes">
-    {{ personne.toString() }}
-  </li>
-</ul>
+<div
+  class="p-2 mb-4 bg-gray-50 rounded-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700"
+>
+  <ol
+    class="divide-y divider-gray-200 dark:divide-gray-700"
+    *ngIf="personnes.length > 0"
+  >
+    <li *ngFor="let personne of personnes">
+      <a
+        href="#"
+        class="block items-center p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700"
+      >
+        <div class="text-gray-600 dark:text-gray-400">
+          <div class="text-base font-normal">
+            <span class="font-medium text-gray-900 dark:text-white">
+              {{ personne.toString() }}</span
+            >
+          </div>
+        </div>
+      </a>
+    </li>
+  </ol>
+</div>
